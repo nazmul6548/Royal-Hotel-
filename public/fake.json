@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Resort",
+      "segment_name": "Resort",
+      "description": "A luxurious beachfront resort offering 5-star accommodations, gourmet dining, and a range of recreational activities.",
+      "price": "$600/night",
+      "status": "rent",
+      "location": "123 Oceanfront Avenue, Tropical Paradise, USA",
+      "facilities": ["swimming pool", "private beach", "spa", "tennis court"],
+      "image": "path/to/image1.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Vacation Rental",
+      "segment_name": "Vacation Rental",
+      "description": "A cozy cabin nestled in the mountains, perfect for a family getaway, featuring 3 bedrooms, 2 bathrooms, and a fireplace.",
+      "price": "$200/night",
+      "status": "rent",
+      "location": "456 Mountain View Road, Serene Wilderness, USA",
+      "facilities": ["fireplace", "deck", "BBQ grill", "hiking trails"],
+      "image": "path/to/image2.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Charming Lodge",
+      "segment_name": "Lodge",
+      "description": "A charming lodge nestled in the forest, offering rustic yet comfortable accommodations, perfect for nature lovers.",
+      "price": "$150/night",
+      "status": "rent",
+      "location": "789 Forest Retreat Lane, Tranquil Woods, USA",
+      "facilities": ["fire pit", "nature trails", "complimentary breakfast", "game room"],
+      "image": "path/to/image3.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Boutique Hotel",
+      "segment_name": "Hotel",
+      "description": "A boutique hotel located in the heart of the city, offering stylish rooms, personalized service, and a trendy rooftop bar.",
+      "price": "$250/night",
+      "status": "rent",
+      "location": "1011 Urban Street, Metropolitan City, USA",
+      "facilities": ["rooftop bar", "fitness center", "concierge service", "complimentary Wi-Fi"],
+      "image": "path/to/image4.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Quaint Guesthouse",
+      "segment_name": "Guesthouse",
+      "description": "A quaint guesthouse with cozy rooms and a welcoming atmosphere, located in a historic neighborhood.",
+      "price": "$100/night",
+      "status": "rent",
+      "location": "1212 Heritage Avenue, Historic District, USA",
+      "facilities": ["shared kitchen", "courtyard garden", "complimentary breakfast", "bicycle rental"],
+      "image": "path/to/image5.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Mountain Chalet",
+      "segment_name": "Vacation Rental",
+      "description": "A spacious chalet nestled in the mountains, offering breathtaking views and modern amenities for a memorable vacation.",
+      "price": "$300/night",
+      "status": "rent",
+      "location": "789 Summit Trail, Alpine Retreat, USA",
+      "facilities": ["hot tub", "ski storage", "fireplace", "balcony"],
+      "image": "path/to/image6.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Rustic Cabin",
+      "segment_name": "Vacation Rental",
+      "description": "A rustic cabin surrounded by nature, featuring a cozy interior, wood-burning stove, and scenic views.",
+      "price": "$150/night",
+      "status": "rent",
+      "location": "234 Forest Lane, Wilderness Escape, USA",
+      "facilities": ["wood-burning stove", "porch swing", "fire pit", "hiking trails"],
+      "image": "path/to/image7.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Seaside Cottage",
+      "segment_name": "Vacation Rental",
+      "description": "A charming seaside cottage with panoramic ocean views, offering a tranquil escape by the sea.",
+      "price": "$250/night",
+      "status": "rent",
+      "location": "567 Beachside Drive, Coastal Haven, USA",
+      "facilities": ["beach access", "deck", "BBQ grill", "outdoor shower"],
+      "image": "path/to/image8.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Historic Inn",
+      "segment_name": "Hotel",
+      "description": "A historic inn dating back to the 18th century, offering elegant rooms, fine dining, and a cozy tavern.",
+      "price": "$200/night",
+      "status": "rent",
+      "location": "890 Main Street, Colonial Village, USA",
+      "facilities": ["tavern", "meeting rooms", "courtyard garden", "complimentary breakfast"],
+      "image": "path/to/image9.jpg"
+    }
+]
+  
