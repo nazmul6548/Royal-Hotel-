@@ -8,7 +8,7 @@
       "status": "rent",
       "location": "123 Oceanfront Avenue, Tropical Paradise, USA",
       "facilities": ["swimming pool", "private beach", "spa", "tennis court"],
-      "image": "path/to/image1.jpg"
+      "image": "https://i.ibb.co/WzpXbDS/pexels-vincent-rivaud-2227774.jpg"
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "status": "rent",
       "location": "456 Mountain View Road, Serene Wilderness, USA",
       "facilities": ["fireplace", "deck", "BBQ grill", "hiking trails"],
-      "image": "path/to/image2.jpg"
+      "image": "https://i.ibb.co/nMdk8Vr/pexels-skylar-kang-6430747.jpg"
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "status": "rent",
       "location": "789 Forest Retreat Lane, Tranquil Woods, USA",
       "facilities": ["fire pit", "nature trails", "complimentary breakfast", "game room"],
-      "image": "path/to/image3.jpg"
+      "image": "https://i.ibb.co/znWkk8h/pexels-josh-hild-3229916.jpg"
     },
     {
       "id": 4,
@@ -41,7 +41,7 @@
       "status": "rent",
       "location": "1011 Urban Street, Metropolitan City, USA",
       "facilities": ["rooftop bar", "fitness center", "concierge service", "complimentary Wi-Fi"],
-      "image": "path/to/image4.jpg"
+      "image": "https://i.ibb.co/52FXwPB/pexels-amicia-short-12716838.jpg"
     },
     {
       "id": 5,
@@ -52,7 +52,7 @@
       "status": "rent",
       "location": "1212 Heritage Avenue, Historic District, USA",
       "facilities": ["shared kitchen", "courtyard garden", "complimentary breakfast", "bicycle rental"],
-      "image": "path/to/image5.jpg"
+      "image": "https://i.ibb.co/M5NkRX9/pexels-cottonbro-studio-5137967.jpg"
     },
     {
       "id": 6,
@@ -63,7 +63,7 @@
       "status": "rent",
       "location": "789 Summit Trail, Alpine Retreat, USA",
       "facilities": ["hot tub", "ski storage", "fireplace", "balcony"],
-      "image": "path/to/image6.jpg"
+      "image": "https://i.ibb.co/YT65LfQ/pexels-ayd-n-kiraz-3750726.jpg"
     },
     {
       "id": 7,
@@ -74,7 +74,7 @@
       "status": "rent",
       "location": "234 Forest Lane, Wilderness Escape, USA",
       "facilities": ["wood-burning stove", "porch swing", "fire pit", "hiking trails"],
-      "image": "path/to/image7.jpg"
+      "image": "https://i.ibb.co/fCcNqpj/pexels-pixabay-279857.jpg"
     },
     {
       "id": 8,
@@ -85,7 +85,7 @@
       "status": "rent",
       "location": "567 Beachside Drive, Coastal Haven, USA",
       "facilities": ["beach access", "deck", "BBQ grill", "outdoor shower"],
-      "image": "path/to/image8.jpg"
+      "image": "https://i.ibb.co/mSRDxby/pexels-pok-rie-5379170.jpg"
     },
     {
       "id": 9,
@@ -96,7 +96,7 @@
       "status": "rent",
       "location": "890 Main Street, Colonial Village, USA",
       "facilities": ["tavern", "meeting rooms", "courtyard garden", "complimentary breakfast"],
-      "image": "path/to/image9.jpg"
+      "image": "https://i.ibb.co/5nZ0H0Z/pexels-david-bartus-586687.jpg"
     }
 ]
   
