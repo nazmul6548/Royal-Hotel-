@@ -10,11 +10,17 @@ const Home = () => {
     return (
         <div className="mt-8">
             <Banner></Banner>
-           <div className="grid grid-cols-1 md:grid-cols-3 mt-12">
-           {
-            data.map((card) =><Card key={card.id} card={card}></Card> )
-           }
-           </div>
+          <div className="mt-12">
+            <h1 className="text-5xl font-bold text-center" >All Cards</h1>
+          <div >
+        
+          <div data-aos="zoom-in" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+          {
+         data.map((card) =><Card key={card.id} card={card}></Card> )
+        }
+          </div>
+        </div>
+          </div>
         </div>
     );
 };
