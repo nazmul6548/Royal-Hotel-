@@ -9,10 +9,13 @@ import {
 import Root from './pages/Root';
 import Error from './error/Error';
 import Home from './pages/Home';
-import CardDetails from './pages/CardDetails';
 import AuthProvider from './pages/authprovider/AuthProvider';
 import LogIn from './pages/LogIn';
 import Register from './pages/Register';
+import UserProfile from './pages/UserProfile';
+import UpdateProfile from './pages/UpdateProfile';
+import Privateroute from './component/privateroute/Privateroute';
+import CardDetails from './pages/CardDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -26,7 +29,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/detailscard/:id",
-        element:<CardDetails></CardDetails>,
+        element:<Privateroute>
+          <CardDetails></CardDetails>
+        </Privateroute>,
         loader:() => {return fetch('/fake.json')},
       },
       {
@@ -37,6 +42,15 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/usProfile",
+        element:<UserProfile></UserProfile>
+
+      },
+      {
+        path:"/upProfile",
+        element:<UpdateProfile></UpdateProfile>
       }
     ]
   },

@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 const CardDetails = () => {
    const {id} = useParams()
-   console.log(id);
+//    console.log(id);
    const card = useLoaderData()
    const detailsCard = card.find(item => item.id == id)
     return (

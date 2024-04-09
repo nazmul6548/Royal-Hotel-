@@ -2,6 +2,7 @@
 // import { AuthContext } from "./authprovider/AuthProvider";
 import { useForm } from "react-hook-form";
 import UseHook from "./hook/UseHook";
+import { Link } from "react-router-dom";
 
 
 const Register = () => {
@@ -73,6 +74,9 @@ const Register = () => {
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>
+        </div>
+        <div>
+            <p className="p-2">have your account? go to <span className="text-purple-700 font-bold underline"><Link to="/login">LogIn</Link></span></p>
         </div>
       </form>
     </div>

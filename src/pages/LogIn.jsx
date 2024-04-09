@@ -61,8 +61,10 @@ const LogIn = () => {
             </button>
             
         </div>
+        
         <p className="text-xs text-center sm:px-6 text-gray-400">Don't have an account?
-            <a rel="noopener noreferrer" href="#" className="underline text-gray-100"><Link to="/register">Sign up</Link></a>
+            <span rel="noopener noreferrer" href="#" className="underline text-gray-100 ml-2"><Link to="/register">Sign up</Link></span>
+       
         </p>
     </div>
     </div>

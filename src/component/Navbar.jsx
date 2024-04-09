@@ -1,12 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import UseHook from "../pages/hook/UseHook";
 
 
 const Navbar = () => {
+    const {logout,user} =UseHook()
     const navlink = <>
     <li><NavLink to="/">home</NavLink></li>
-    <li><NavLink to="upprofile">Update Profile</NavLink></li>
+    <li><NavLink to="upProfile">Update Profile</NavLink></li>
     <li><NavLink to="/login">Log In</NavLink></li>
-    {/* <li><NavLink to="/register">Register</NavLink></li> */}
+    <li><NavLink to="/usProfile">User Profile</NavLink></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -29,12 +31,35 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="w-10 rounded-full overflow-hidden">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"  />
-        </div>
-    <div className="ml-2">
+
+    {
+        user ? <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                    <img src="" alt="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+            </label>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li>
+                    <button className="btn btn-sm btn-ghost">nazmul</button>
+                </li>
+                <li>
+                <button onClick={logout} className="btn btn-sm btn-ghost">Logout</button>
+                </li>
+
+            </ul>
+        </div>   
+        :
+        <Link to="/login">
+            <button className="btn btn-sm btn-ghost">Login</button>
+        </Link> 
+    }
+  {/* <div className="w-10 rounded-full overflow-hidden">
+          <img alt="Tailwind CSS Navbar component" src=""  />
+        </div> */}
+    {/* <div className="ml-2">
     <a className="btn">LogIn</a>
-    </div>
+    </div> */}
   </div>
 </div>
     );
