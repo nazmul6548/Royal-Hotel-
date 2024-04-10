@@ -3,13 +3,15 @@
 import { useForm } from "react-hook-form";
 import UseHook from "./hook/UseHook";
 import { Link } from "react-router-dom";
-
+import {useNavigate,useLocation} from 'react-router-dom'
 
 const Register = () => {
 
     const {createUser} = UseHook()
     // console.log(createUser);
-
+    const navigate = useNavigate()
+    const location = useLocation()
+    const div =location?.state || '/';
 
    
     const {
@@ -18,9 +20,12 @@ const Register = () => {
       const onSubmit = data => {
         const {email,password} = data;
         createUser(email,password)
-        .then(result => {
-            console.log(result);
-        })
+        .then((result) => {
+          if (result.user) {
+              navigate(div)
+             
+          }
+      })
     }
     
 

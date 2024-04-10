@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import UseHook from "./hook/UseHook";
 import SocialLogin from "../component/SocialLogin";
-
+import {useNavigate,useLocation} from 'react-router-dom'
 const LogIn = () => {
 
     const {login} =UseHook()
@@ -14,16 +14,20 @@ const LogIn = () => {
         handleSubmit,
         formState: { errors },
       } = useForm()
+
+      const navigate = useNavigate()
+    const location = useLocation()
+    const div =location?.state || '/';
     
       const onSubmit = (data) => {
         const {email,password} = data
 
         login(email, password)
-        .then(result => {
-            console.log(result.user);
-        })
-        .catch(error => {
-            console.log(error);
+        .then((result) => {
+            if (result.user) {
+                navigate(div)
+                // console.log(result.user);
+            }
         })
       }
     return (
