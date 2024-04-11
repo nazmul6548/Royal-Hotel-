@@ -1,9 +1,18 @@
+import UseHook from "./hook/UseHook";
 
 
 const UserProfile = () => {
+    const {user} =UseHook()
     return (
-        <div>
-            <h3>user profile</h3>
+        <div className="flex justify-center mt-10">
+            <div className="flex flex-col max-w-md p-6 bg-gray-900 text-gray-100">
+	<img src={user?.photoURL} alt="" className="flex-shrink-0 object-cover h-64 rounded-sm sm:h-96 bg-gray-500 aspect-square" />
+	<div>
+		<h2 className="text-xl font-semibold">User Name : {user?.displayName}</h2>
+		<span className="block pb-2 text-sm text-gray-400">CTO of Company Inc.</span>
+		<p>user email : {user.email}</p>
+	</div>
+</div>
         </div>
     );
 };

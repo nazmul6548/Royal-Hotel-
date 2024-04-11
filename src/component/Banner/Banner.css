@@ -7,13 +7,18 @@
     background-repeat: no-repeat;
     align-items: center;
     background-size: cover;
+    
 }
 .slide1{
-    background-image: url('https://i.ibb.co/k1c13mD/chuttersnap-OB7ol699-Iww-unsplash.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/x5sT7pX/pexels-pixabay-258154.jpg');
+    background-position: center;
+    background-size: cover;
 }
 .slide2{
-    background-image: url('https://i.ibb.co/F4mH6Mj/kate-townsend-h-EC6zxd-FF0-M-unsplash.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/0hRdPR2/pexels-helena-jankovi-ov-kov-ov-7051798.jpg');
 }
 .slide3{
-    background-image: url('https://i.ibb.co/N2HzLVd/dan-burton-w-Hs-OV75-Xi8-Y-unsplash.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url('https://i.ibb.co/52FXwPB/pexels-amicia-short-12716838.jpg');
+    background-position: center;
+    background-size: cover;
 }

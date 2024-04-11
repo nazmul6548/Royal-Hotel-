@@ -13,6 +13,7 @@ const CardDetails = () => {
    const card = useLoaderData()
    const detailsCard = card.find(item => item.id == id)
     return (
+        
         <div>
             <section className="mt-10">
                 <h1 className="text-center text-5xl font-bold pb-5">Details</h1>
@@ -48,6 +49,7 @@ const CardDetails = () => {
 	<img src={detailsCard.image} alt="" className="w-5/6 mx-auto mb-12 -mt-20 bg-gray-500 rounded-lg shadow-md lg:-mt-40 md:h-[100vh] object-cover" />
 </section>
         </div>
+        
     );
 };
 

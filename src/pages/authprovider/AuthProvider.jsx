@@ -19,13 +19,10 @@ export const AuthProvider = ({children}) => {
 
 
     const userUpdateProfile = (name,image)=>{
-        updateProfile(auth.currentUser, {
-            displayName: "Jane Q. User", photoURL: "https://example.com/jane-q-user/profile.jpg"
-          }).then(() => {
-          
-          }).catch((error) => {
-            
-          });
+        
+        return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: image
+          })
     }
    
 
@@ -44,7 +41,7 @@ export const AuthProvider = ({children}) => {
     }
 
     const logout = () => {
-        
+        setLoader(true)
         setUser(null)
         signOut(auth)
     }
@@ -61,7 +58,7 @@ export const AuthProvider = ({children}) => {
    },[])
 
 
-    const allvalue = {user,createUser,login,googlelogin,github,logout,loader}
+    const allvalue = {user,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}
     return (
         <div>
            <AuthContext.Provider value={allvalue}>
