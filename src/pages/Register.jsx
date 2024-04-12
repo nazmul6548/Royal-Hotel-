@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import UseHook from "./hook/UseHook";
 import { Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom'
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -39,6 +40,10 @@ const Register = () => {
 
     return (
         <div className="hero min-h-screen bg-base-100">
+
+<Helmet>
+    <title>Register</title>
+  </Helmet>
   <div className="hero-content flex-col lg:flex-row-reverse">
     
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-slate-800">

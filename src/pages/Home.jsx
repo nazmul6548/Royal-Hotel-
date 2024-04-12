@@ -1,14 +1,22 @@
 import Banner from "../component/Banner/Banner";
 import {useLoaderData} from "react-router-dom"
 import Card from "../component/Card";
- 
+import { Helmet } from "react-helmet-async";
+
+
 
 
 const Home = () => {
+  
+  
     const data = useLoaderData()
     console.log(data);
     return (
+      
         <div className="mt-8">
+          <Helmet>
+    <title>home</title>
+  </Helmet>
             <Banner></Banner>
           <div className="mt-12">
             <h1 className="text-5xl font-bold text-center" >All Cards</h1>
@@ -22,7 +30,7 @@ const Home = () => {
         </div>
           </div>
         </div>
-    );
+    )
 };
 
 export default Home;

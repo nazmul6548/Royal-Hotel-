@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "./Banner.css";
-
+import 'animate.css';
 // import required modules
 
 const Banner = () => {
@@ -22,7 +22,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="slide slide1 flex flex-col">
             <div>
-              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white">
+              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white animate__animated animate__fadeInDownBig">
                 Super 8 By Wyndham Toronto East On
               </h1>
             </div>
@@ -49,7 +49,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="slide slide2 flex flex-col">
             <div>
-              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white">
+              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white animate__animated animate__fadeInTopLeft">
                 Homewood Suites by Hilton Toronto Airport Corporate Centre
               </h1>
             </div>
@@ -76,7 +76,7 @@ const Banner = () => {
         <SwiperSlide>
           <div className="slide slide3 flex flex-col">
             <div>
-              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white">
+              <h1 className="text-3xl md:text-6xl font-bold w-3/4 m-auto text-center text-white animate__animated animate__fadeInBottomRight">
                 Holiday Inn Toronto Downtown Centre
               </h1>
             </div>

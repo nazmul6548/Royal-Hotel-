@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import UseHook from "./hook/UseHook";
 import SocialLogin from "../component/SocialLogin";
 import {useNavigate,useLocation} from 'react-router-dom'
+import { Helmet } from "react-helmet-async";
 const LogIn = () => {
 
     const {login} =UseHook()
@@ -31,7 +32,10 @@ const LogIn = () => {
         })
       }
     return (
-        <div className="flex items-center flex-col">
+        <div data-aos="zoom-out" className="flex items-center flex-col">
+            <Helmet>
+    <title>LogIn</title>
+  </Helmet>
             <h1 className="text-5xl font-bold mt-6 pb-10">You have an account please LogIn</h1>
         <div className="w-full  max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>

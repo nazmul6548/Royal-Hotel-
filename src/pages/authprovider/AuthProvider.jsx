@@ -50,6 +50,7 @@ export const AuthProvider = ({children}) => {
     const unsubscrive =onAuthStateChanged(auth, (user) => {
         if (user) {
         setUser(user)
+        console.log(user);
         setLoader(false)
          
         }

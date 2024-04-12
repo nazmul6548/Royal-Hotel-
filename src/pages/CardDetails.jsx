@@ -1,10 +1,12 @@
 // import {useLoaderData} from "react-router-dom"
+import { ScrollRestoration } from "react-router-dom";
 import {useParams} from "react-router-dom";
 import {useLoaderData} from "react-router-dom";
 import 'animate.css';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Helmet } from "react-helmet-async";
 // ..
 AOS.init();
 const CardDetails = () => {
@@ -15,6 +17,9 @@ const CardDetails = () => {
     return (
         
         <div>
+            <Helmet>
+    <title>detailsCart</title>
+  </Helmet>
             <section className="mt-10">
                 <h1 className="text-center text-5xl font-bold pb-5">Details</h1>
 	<div className="bg-violet-600 ">
@@ -48,6 +53,7 @@ const CardDetails = () => {
 	</div>
 	<img src={detailsCard.image} alt="" className="w-5/6 mx-auto mb-12 -mt-20 bg-gray-500 rounded-lg shadow-md lg:-mt-40 md:h-[100vh] object-cover" />
 </section>
+<ScrollRestoration></ScrollRestoration>
         </div>
         
     );

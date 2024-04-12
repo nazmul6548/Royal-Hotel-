@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import UseHook from "../pages/hook/UseHook";
-
+import 'animate.css';
 
 const Navbar = () => {
     const {logout,user} =UseHook()
@@ -22,7 +22,8 @@ const Navbar = () => {
         {navlink}
       </ul>
     </div>
-    <a className=" text-xl"><img src="https://i.ibb.co/tBmmWW2/Hospitality1.jpg" className="h-[40px] w-full" alt="" /></a>
+    <a className=" text-3xl font-bold flex items-center"><h3 className="text-4xl  text-secondary animate__animated animate__backInLeft"> Royal  </h3>Hotel</a>
+    
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -33,14 +34,14 @@ const Navbar = () => {
   <div className="navbar-end">
 
     {
-        user ? <div className="dropdown dropdown-end">
+        user ? <div className="dropdown dropdown-hover">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
                     <img src={user?.photoURL} alt="" />
                 </div>
             </label> 
             {/*  */}
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[3] p-2 shadow bg-base-100 rounded-box w-52">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[3] p-2 shadow bg-base-100 rounded-box w-52 right-0 top-8">
                 <li>
                     <button className="btn btn-sm btn-ghost">{user?.displayName || "not found"}</button>
                 </li>
