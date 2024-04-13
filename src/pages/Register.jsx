@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import swal from 'sweetalert';
 
 
 
@@ -51,11 +51,28 @@ const Register = () => {
           
           .then(()=>{
                 navigate(div)
+                toast.success("Registration successful!")
                 
               }
-                
+              
               )
             })
+
+
+
+            .then(() => {
+              swal({
+                title: "Registration successful",
+                // text: "You clicked the button!",
+                icon: "success",
+                // button: "Aww yiss!",
+                
+                
+              });
+          })
+          .catch(error => {
+              console.error("Error:", error);
+          });
 
           }
           // logout()
