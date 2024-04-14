@@ -8,6 +8,7 @@ const googleProvider = new GoogleAuthProvider()
 const githubProvider = new GithubAuthProvider()
 
 export const AuthProvider = ({children}) => {
+    const [reload,setReload] =useState(false)
     const [user,setUser] = useState(null);
     // console.log(user);
     const [loader,setLoader] = useState(true);
@@ -48,18 +49,18 @@ export const AuthProvider = ({children}) => {
 
    useEffect(()=>{
     const unsubscrive =onAuthStateChanged(auth, (user) => {
-        if (user) {
+        // if (user) {
         setUser(user)
-        console.log(user);
+        // console.log(user);
         setLoader(false)
          
-        }
+        // }
       });
       return () => unsubscrive();
-   },[])
+   },[reload])
 
 
-    const allvalue = {user,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}
+    const allvalue = {user,setReload,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}
     return (
         <div>
            <AuthContext.Provider value={allvalue}>

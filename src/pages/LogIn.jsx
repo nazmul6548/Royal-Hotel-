@@ -6,7 +6,15 @@ import UseHook from "./hook/UseHook";
 import SocialLogin from "../component/SocialLogin";
 import {useNavigate,useLocation} from 'react-router-dom'
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from 'react-toastify';
+import swal from "sweetalert";
+import { useState } from "react";
+import { IoEyeOffOutline } from "react-icons/io5";
+import { IoEyeOutline } from "react-icons/io5";
 const LogIn = () => {
+    const [showPassword,setShowPassword] = useState(false);
 
     const {login} =UseHook()
 
@@ -27,16 +35,33 @@ const LogIn = () => {
         .then((result) => {
             if (result.user) {
                 navigate(div)
+                // toast.success("Login successful!");
                 // console.log(result.user);
             }
         })
+
+
+        .then(() => {
+            swal({
+              title: "LogIn successful",
+              // text: "You clicked the button!",
+              icon: "success",
+              // button: "Aww yiss!",
+              
+              
+            });
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+
       }
     return (
         <div data-aos="zoom-out" className="flex items-center flex-col">
             <Helmet>
     <title>LogIn</title>
   </Helmet> 
-            <h1 className="text-5xl font-bold mt-6 pb-10">Your have an account ? please LogIn</h1>
+            <h1 className="text-3xl text-center md:text-5xl font-bold mt-6 pb-10">Your have an account ? please LogIn</h1>
         <div className="w-full  max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
@@ -47,7 +72,16 @@ const LogIn = () => {
             </div>
             <div className="space-y-1 text-sm">
                 <label htmlFor="password" className="block text-gray-400">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" {...register("password", { required: true })} />
+               <div className="relative">
+               <input type={showPassword ? "text" : "password"}
+                 name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md border-gray-700 bg-gray-900 text-gray-100 focus:border-violet-400" {...register("password", { required: true })} />
+                 <span className="absolute top-3 right-2" onClick={() => setShowPassword(!showPassword)}>
+                    {
+                        showPassword ? <IoEyeOutline /> : <IoEyeOffOutline />
+                    }
+
+                 </span>
+               </div>
                 {errors.password && <span>This field is required</span>}
                 <div className="flex justify-end text-xs text-gray-400">
                     <a rel="noopener noreferrer" href="#">Forgot Password?</a>
@@ -75,6 +109,7 @@ const LogIn = () => {
        
         </p>
     </div>
+    <ToastContainer></ToastContainer>
     </div>
     );
 };

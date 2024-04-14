@@ -6,7 +6,16 @@ const Card = ({card}) => {
     const {estate_title,description,image,segment_name,id} = card;
     return (
         <div className=" max-w-full m-8 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
-        <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" />
+        {/*  */}
+        <div className="relative  overflow-hidden bg-cover bg-no-repeat">
+  <img
+    src={image}
+    className=" w-[100%] object-cover h-72 object-center transition duration-300 ease-in-out hover:scale-110"
+    alt="Louvre" />
+</div>
+
+{/* <img src={image} alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500" /> */}
+        {/*  */}
         <div className="flex flex-col justify-between p-6 space-y-8">
             <div className="space-y-2">
                 <h2 className="text-3xl font-semibold tracking-wide">{estate_title}</h2>

@@ -9,13 +9,14 @@ import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import swal from 'sweetalert';
-
-
+import { IoEyeOutline } from "react-icons/io5";
+import { IoEyeOffOutline } from "react-icons/io5";
 
 const Register = () => {
 
-    const {createUser,userUpdateProfile,logout} = UseHook()
+    const {createUser,userUpdateProfile,setReload} = UseHook()
     const [error,setError]  = useState("")
+    const [showPasswor,setShowPasswor] = useState(false)
     // console.log(createUser);
     
     
@@ -52,7 +53,7 @@ const Register = () => {
           .then(()=>{
                 navigate(div)
                 toast.success("Registration successful!")
-                
+                setReload(true)
               }
               
               )
@@ -122,7 +123,15 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-white">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" {...register("password", { required: true })} />
+          <div className="relative">
+          <input type={showPasswor ? "text" : "password"} 
+          placeholder="password" className="input input-bordered w-full" {...register("password", { required: true })} />
+          <span className="absolute  right-2 top-4  text-red-900" onClick={() => setShowPasswor(!showPasswor)}>
+            {
+              showPasswor ? <IoEyeOutline /> : <IoEyeOffOutline />
+            }
+          </span>
+          </div>
           {errors.password && <span className="text-red-600">This field is required</span>}
           <label className="label">
             <a href="#" className="label-text-alt link link-hover text-white">Forgot password?</a>
