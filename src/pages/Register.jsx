@@ -14,7 +14,7 @@ import { IoEyeOffOutline } from "react-icons/io5";
 
 const Register = () => {
 
-    const {createUser,userUpdateProfile,setReload} = UseHook()
+    const {createUser,userUpdateProfile,setReload,logout} = UseHook()
     const [error,setError]  = useState("")
     const [showPasswor,setShowPasswor] = useState(false)
     // console.log(createUser);
@@ -31,6 +31,8 @@ const Register = () => {
     
       const onSubmit = data => {
         const {email,password,image,name} = data;
+
+       
 
         if (password.length < 6) {
           setError(toast.error("password must be at least 6 characters or long"))
@@ -49,11 +51,13 @@ const Register = () => {
         createUser(email,password)
         .then(() => {
           userUpdateProfile(name,image)
-          
+          // logout()
+          // toast.success("Registration successful!")
           .then(()=>{
                 navigate(div)
                 toast.success("Registration successful!")
                 setReload(true)
+               
               }
               
               )
@@ -104,7 +108,7 @@ const Register = () => {
           <label className="label">
             <span className="label-text text-white">Email</span>
           </label>
-          <input type="email" placeholder="email" className="input input-bordered" {...register("email",{ required: true } )} />
+          <input type="email" placeholder="email" className="input input-bordered" {...register("email",{ required: true} )} />
         </div>
         {errors.email && <span className="text-red-600">This field is required</span>}
 

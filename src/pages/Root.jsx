@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar";
 import Home from "./Home";
 import {Outlet} from "react-router-dom"
 import AuthProvider from "./authprovider/AuthProvider";
+import Sectionfirst from "./Sectionfirst";
 
 
 const Root = () => {
@@ -10,6 +11,7 @@ const Root = () => {
         <div>
             <Navbar></Navbar>
            <Outlet></Outlet>
+           
            <Footer></Footer>
             
             

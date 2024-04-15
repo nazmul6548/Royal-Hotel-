@@ -3,6 +3,8 @@ import {useLoaderData} from "react-router-dom"
 import Card from "../component/Card";
 import { Helmet } from "react-helmet-async";
 import 'animate.css';
+import Sectionfirst from "./Sectionfirst";
+import SectionSecond from "./SectionSecond";
 
 
 
@@ -30,6 +32,8 @@ const Home = () => {
           </div>
         </div>
           </div>
+          <Sectionfirst></Sectionfirst>
+          <SectionSecond></SectionSecond>
         </div>
     )
 };
