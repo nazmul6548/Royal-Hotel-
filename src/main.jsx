@@ -16,6 +16,8 @@ import UserProfile from './pages/UserProfile';
 import UpdateProfile from './pages/UpdateProfile';
 import Privateroute from './component/privateroute/Privateroute';
 import CardDetails from './pages/CardDetails';
+import AboutUs from './pages/Review';
+import Review from './pages/Review';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +55,12 @@ const router = createBrowserRouter([
       {
         path:"/upProfile",
         element:<UpdateProfile></UpdateProfile>
+      },
+      {
+        path:"/review",
+        element:<Privateroute>
+          <Review></Review>
+        </Privateroute>
       }
     ]
   },

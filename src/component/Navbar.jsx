@@ -10,7 +10,7 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="upProfile">Update Profile</NavLink>
+        <NavLink to="/upProfile">Update Profile</NavLink>
       </li>
       <li>
         <NavLink to="/login">Log In</NavLink>
@@ -20,11 +20,19 @@ const Navbar = () => {
           <NavLink to="/usProfile">User Profile</NavLink>
         </li>
       )}
+
+     {
+      user &&  <li>
+      <NavLink to="/review">Review</NavLink>
+    </li>
+     }
     </>
   );
-  return loader ?  <div className="flex justify-center">
-  <span className="loading loading-spinner loading-lg flex "></span>
-</div> :  (
+  return loader ? (
+    <div className="flex justify-center">
+      <span className="loading loading-spinner loading-lg flex "></span>
+    </div>
+  ) : (
     <div className="navbar bg-base-300">
       <div className="navbar-start">
         <div className="dropdown">
