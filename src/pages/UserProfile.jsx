@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import UseHook from "./hook/UseHook";
+import { Link } from "react-router-dom";
 
 
 
@@ -22,6 +23,9 @@ const UserProfile = () => {
 		<span className="block pb-2 text-sm text-gray-400 py-4">CTO of Company Inc.</span>
 		<p>user email : {user.email}</p>
 	</div>
+<Link to="/upProfile">
+<button className="bg-primary w-full py-3 mt-4 rounded-xl">Update profile</button>
+</Link>
 </div>
         </div>
         </div>
