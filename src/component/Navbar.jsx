@@ -59,13 +59,13 @@ const Navbar = () => {
             {navlink}
           </ul>
         </div>
-        <a className=" text-3xl font-bold flex items-center">
+        <Link to="/" className=" text-3xl font-bold flex items-center">
           <h3 className="text-4xl  text-secondary animate__animated animate__backInLeft">
             {" "}
             Royal{" "}
           </h3>
           Hotel
-        </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal px-1">{navlink}</ul>

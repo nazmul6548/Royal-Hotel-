@@ -9,12 +9,12 @@ const Review = () => {
   </Helmet>
           <div className="lg:p-10 p-6 font-[sans-serif] text-[#333] bg-gray-100">
             <div className="mb-20 text-center">
-                <h2 className="text-3xl font-extrabold">What our happy client say</h2>
+                <h2 className="text-3xl font-extrabold animate__animated animate__flash">What our happy client say</h2>
             </div>
-            <div className="grid md:grid-cols-3 md:gap-6 max-md:gap-10 max-w-6xl mx-auto">
-                <div className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
+            <div  className="grid md:grid-cols-3 md:gap-6 max-md:gap-10 max-w-6xl mx-auto">
+                <div data-aos="flip-up" className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
                     <img src="https://readymadeui.com/profile_2.webp" className="w-14 h-14 rounded-full absolute right-0 left-0 border-4 border-white shadow-xl mx-auto -top-7" />
-                    <div className="flex space-x-1 mt-4">
+                    <div  className="flex space-x-1 mt-4">
                         <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -47,7 +47,7 @@ const Review = () => {
                         <p className="mt-1 text-xs text-gray-400">Founder of Rubik</p>
                     </div>
                 </div>
-                <div className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
+                <div data-aos="flip-right"  className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
                     <img src="https://readymadeui.com/profile_3.webp" className="w-14 h-14 rounded-full absolute right-0 left-0 border-4 border-white shadow-xl mx-auto -top-7" />
                     <div className="flex space-x-1 mt-4">
                         <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"
@@ -82,7 +82,7 @@ const Review = () => {
                         <p className="mt-1 text-xs text-gray-400">Founder of Alpha</p>
                     </div>
                 </div>
-                <div className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
+                <div data-aos="flip-left" className="max-w-[350px] h-auto py-8 px-4 lg:px-8 rounded-md mx-auto bg-white relative">
                     <img src="https://readymadeui.com/profile_4.webp" className="w-14 h-14 rounded-full absolute right-0 left-0 border-4 border-white shadow-xl mx-auto -top-7" />
                     <div className="flex space-x-1 mt-4">
                         <svg className="w-4 fill-[#facc15]" viewBox="0 0 14 13" fill="none"

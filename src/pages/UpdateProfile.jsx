@@ -4,7 +4,7 @@ import UseHook from "./hook/UseHook";
 import { useForm } from "react-hook-form";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const UpdateProfile = () => {
   const [isUpdated, setIsUpdated] = useState(false);
@@ -28,45 +28,48 @@ const UpdateProfile = () => {
         console.log(name, image);
         setIsUpdated(true);
         navigate(div);
+        window.location.reload();
       })
       .catch((error) => {
         console.error("error", error);
       });
   };
-  useEffect(() => {
-    
-    // Perform any actions needed after profile update and re-render
-    console.log("Profile updated and re-rendered");
-  }, [isUpdated]);
+
 
   return (
-    <div className="flex flex-col">
-      <Helmet>
-        <title>updateprofile</title>
-      </Helmet>
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col w-2/6 m-auto py-4"
-      >
-        <input
-          className="py-2 border-2 rounded-xl p-2"
-          type="name"
-          placeholder="name"
-          {...register("name", { required: true })}
-        />
-        {errors.name && (
-          <span className="text-red-600">This field is required</span>
-        )}
-        <input
-          className="py-2 border-2 rounded-xl mt-3 p-2"
-          type="text"
-          placeholder="photo url"
-          {...register("image")}
-        />
+    
+        <div data-aos="flip-down"  className="flex flex-col bg-[#36034e]  h-[60vh] mt-12 ">
+      
+      
+      <h1 className="text-5xl  font-bold text-white text-center p-6 animate__animated animate__bounce">Update Your Profile</h1>
+    <Helmet>
+      <title>updateprofile</title>
+    </Helmet>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col md:w-2/6 m-auto py-3"
+    >
+      <input
+        className="py-2 border-2 rounded-xl p-2"
+        type="name"
+        placeholder="name"
+        {...register("name", { required: true })}
+      />
+      {errors.name && (
+        <span className="text-red-600">This field is required</span>
+      )}
+      <input
+        className="py-2 border-2 rounded-xl mt-3 p-2"
+        type="text"
+        placeholder="photo url"
+        {...register("image")}
+      />
 
-        <button className="py-2 border-2 rounded-xl mt-2">Save Change</button>
-      </form>
-    </div>
+      <button className="py-2 border-2 rounded-xl mt-2 bg-[#22d3ee] text-white font-bold hover:bg-secondary">Save Change</button>
+    </form>
+    
+  </div>
+    
   );
 };
 

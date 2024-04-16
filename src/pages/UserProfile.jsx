@@ -8,7 +8,10 @@ const UserProfile = () => {
    
     
     return (
-        <div data-aos="flip-left" className="flex justify-center mt-10">
+        <div>
+            <h1 className="text-center p-4 font-bold text-5xl ">User Profile</h1>
+            <div data-aos="flip-left" className="flex justify-center mt-10">
+            
             <Helmet>
     <title>userProfile</title>
   </Helmet>
@@ -20,6 +23,7 @@ const UserProfile = () => {
 		<p>user email : {user.email}</p>
 	</div>
 </div>
+        </div>
         </div>
     );
 };

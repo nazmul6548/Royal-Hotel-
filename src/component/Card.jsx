@@ -18,11 +18,11 @@ const Card = ({card}) => {
         {/*  */}
         <div className="flex flex-col justify-between p-6 space-y-8">
             <div className="space-y-2">
-                <h2 className="text-3xl font-semibold tracking-wide">{estate_title}</h2>
+                <h2 className="text-3xl font-semibold tracking-wide ">{estate_title}</h2>
                 <p className="dark:text-gray-800">{description}</p>
             </div>
             <Link to={`/detailscard/${id}`}>
-            <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide  bg-cyan-400 rounded-md dark:bg-violet-600 dark:text-gray-50">View Property</button>
+            <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide  bg-cyan-400 rounded-md dark:bg-violet-600 dark:text-gray-50 ">View Property</button>
             </Link>
         </div>
     </div>
