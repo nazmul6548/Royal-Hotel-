@@ -6,7 +6,7 @@ import UseHook from "./hook/UseHook";
 import SocialLogin from "../component/SocialLogin";
 import {useNavigate,useLocation} from 'react-router-dom'
 import { Helmet } from "react-helmet-async";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from 'react-toastify';
 import swal from "sweetalert";

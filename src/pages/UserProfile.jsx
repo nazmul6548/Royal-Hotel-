@@ -2,8 +2,11 @@ import { Helmet } from "react-helmet-async";
 import UseHook from "./hook/UseHook";
 
 
+
 const UserProfile = () => {
     const {user} =UseHook()
+   
+    
     return (
         <div data-aos="flip-left" className="flex justify-center mt-10">
             <Helmet>

@@ -51,6 +51,7 @@ const Register = () => {
         createUser(email,password)
         .then(() => {
           userUpdateProfile(name,image)
+          
           // logout()
           // toast.success("Registration successful!")
           .then(()=>{

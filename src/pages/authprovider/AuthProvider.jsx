@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../../component/firebase/firebase.config";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null)
 
@@ -25,6 +26,13 @@ export const AuthProvider = ({children}) => {
             displayName: name, photoURL: image
           })
     }
+
+    const upProfile =(name,image)=>{
+        return updateProfile(auth.currentUser,{
+            displayname:name,
+            photoURl:image,
+        })
+    }
    
 
     const login = (email, password) => {
@@ -33,12 +41,26 @@ export const AuthProvider = ({children}) => {
     }
     const googlelogin = () => {
         setLoader(true)
-        return signInWithPopup(auth, googleProvider)
+         signInWithPopup(auth, googleProvider)
+        .then(() => {
+            toast.success('Login successful with Google');
+        })
+        .catch((error) => {
+            
+            toast.error('Failed to login with Google');
+        });
     }
 
     const github = () => {
         setLoader(true)
-        return signInWithPopup(auth, githubProvider)
+        signInWithPopup(auth, githubProvider)
+        .then(() => {
+            toast.success('Login successful with Github');
+        })
+        .catch((error) => {
+            
+            toast.error('Failed to login with Github');
+        });
     }
 
     const logout = () => {
@@ -60,7 +82,7 @@ export const AuthProvider = ({children}) => {
    },[reload])
 
 
-    const allvalue = {user,setReload,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}
+    const allvalue = {user,upProfile,setReload,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}
     return (
         <div>
            <AuthContext.Provider value={allvalue}>
