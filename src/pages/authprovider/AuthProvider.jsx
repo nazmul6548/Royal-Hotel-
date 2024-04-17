@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../../component/firebase/firebase.config";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
-import { toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
-
+import 'react-toastify/dist/ReactToastify.css';
 export const AuthContext = createContext(null)
 
 const googleProvider = new GoogleAuthProvider()
@@ -53,11 +53,15 @@ export const AuthProvider = ({children}) => {
          signInWithPopup(auth, googleProvider)
         .then(() => {
             
-            toast.success('Login successful with Google');
+            
+            
+            setLoader(false)
         })
         .catch((error) => {
             
             toast.error('Failed to login with Google');
+
+            setLoader(false)
         });
     }
 
@@ -66,10 +70,12 @@ export const AuthProvider = ({children}) => {
         signInWithPopup(auth, githubProvider)
         .then(() => {
             toast.success('Login successful with Github');
+            setLoader(false)
         })
         .catch((error) => {
             
             toast.error('Failed to login with Github');
+            setLoader(false)
         });
     }
     
@@ -99,6 +105,7 @@ export const AuthProvider = ({children}) => {
            <AuthContext.Provider value={allvalue}>
             {children}
            </AuthContext.Provider>
+           <ToastContainer></ToastContainer>
         </div>
     );
 };
