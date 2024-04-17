@@ -30,7 +30,7 @@ const CardDetails = () => {
               {detailsCard.description}
             </p>
 
-            <div className="flex flex-col  w-2/3  m-auto">
+            <div className="flex flex-col w-full md:w-2/3  m-auto">
               <div className="overflow-x-auto rounded-xl bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% dark:bg-neutral-700">
                 <table className="min-w-full  text-left text-sm whitespace-nowrap">
                   <tbody>
