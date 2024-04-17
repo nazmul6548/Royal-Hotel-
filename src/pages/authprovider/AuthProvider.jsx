@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import auth from "../../component/firebase/firebase.config";
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext(null)
 
@@ -39,10 +40,19 @@ export const AuthProvider = ({children}) => {
         setLoader(true)
        return signInWithEmailAndPassword(auth, email, password)
     }
+
+
+
+  
+    
+
+
+
     const googlelogin = () => {
         setLoader(true)
          signInWithPopup(auth, googleProvider)
         .then(() => {
+            
             toast.success('Login successful with Google');
         })
         .catch((error) => {
@@ -62,7 +72,7 @@ export const AuthProvider = ({children}) => {
             toast.error('Failed to login with Github');
         });
     }
-
+    
     const logout = () => {
         setLoader(true)
         setUser(null)
@@ -79,7 +89,8 @@ export const AuthProvider = ({children}) => {
         // }
       });
       return () => unsubscrive();
-   },[reload])
+   },[])
+
 
 
     const allvalue = {user,upProfile,setReload,createUser,login,googlelogin,github,logout,loader,userUpdateProfile}

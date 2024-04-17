@@ -9,17 +9,19 @@ const SocialLogin = () => {
     // console.log(location);
 
 
-    const div =location?.state || '/';
+    const from =location?.state || '/';
+    console.log(location.state);
 
-    const handlesocialLogIn = (socialProvider) => {
-        socialProvider().then((result) => {
-           if (result.user) {
-               navigate(div)
-               // console.log(result.user);
-           }
-       })
+    const handlesocialLogIn = () => {
+        googlelogin()
+        
+               navigate(from)
+               console.log("jewel");
+       
    }
-    
+
+  
+  
     
     return (
         <div>

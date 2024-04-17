@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import 'animate.css';
 import Sectionfirst from "./Sectionfirst";
 import SectionSecond from "./SectionSecond";
-
+import { ScrollRestoration } from "react-router-dom";
 
 
 const Home = () => {
@@ -34,6 +34,7 @@ const Home = () => {
           </div>
           <Sectionfirst></Sectionfirst>
           <SectionSecond></SectionSecond>
+          <ScrollRestoration></ScrollRestoration>
         </div>
     )
 };
