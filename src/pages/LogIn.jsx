@@ -57,7 +57,7 @@ const LogIn = () => {
 
       }
     return (
-        <div data-aos="zoom-out" className="flex items-center flex-col">
+        <div data-aos="zoom-in" className="flex items-center flex-col overflow-x-hidden">
             <Helmet>
     <title>LogIn</title>
   </Helmet> 

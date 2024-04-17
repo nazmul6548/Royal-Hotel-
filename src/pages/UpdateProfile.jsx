@@ -38,7 +38,7 @@ const UpdateProfile = () => {
 
   return (
     
-        <div data-aos="flip-down"  className="flex flex-col bg-[#36034e]  h-[60vh] mt-12 ">
+        <div data-aos="zoom-in"  className="flex flex-col bg-[#36034e]  h-[60vh] mt-12 ">
       
       
       <h1 className="text-5xl  font-bold text-white text-center p-6 animate__animated animate__bounce">Update Your Profile</h1>
