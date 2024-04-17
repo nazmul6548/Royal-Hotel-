@@ -11,7 +11,7 @@ import 'animate.css';
 
 const Banner = () => {
   return (
-    <div>
+    <div className="">
       <Swiper
         navigation={true}
         pagination={{ clickable: true }}
