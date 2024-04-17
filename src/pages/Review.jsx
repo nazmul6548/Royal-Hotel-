@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const Review = () => {
     return (
-        <div className="mt-12">
+        <div className="">
             <Helmet>
     <title>Review</title>
   </Helmet>

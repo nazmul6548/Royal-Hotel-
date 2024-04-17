@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="px-4 divide-y mt-12 bg-gray-100 text-gray-800">
+        <footer className="px-4 divide-y  bg-gray-100 text-gray-800">
         <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
             <div className="lg:w-1/3">
                 <Link to="/" rel="noopener noreferrer" href="#" className="flex justify-center space-x-3 lg:justify-start">
@@ -80,7 +80,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        <div className="py-6 text-sm text-center text-gray-600">© 1968 Company Co. All rights reserved.</div>
+        <div className="py-6 text-sm text-center text-gray-600">© 2024 Company Co. All rights reserved.</div>
     </footer>
     );
 };
