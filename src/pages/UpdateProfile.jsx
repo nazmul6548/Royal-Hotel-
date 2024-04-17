@@ -47,7 +47,7 @@ const UpdateProfile = () => {
     </Helmet>
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col md:w-2/6 m-auto py-3"
+      className="flex flex-col w-full md:w-2/6 m-auto py-3"
     >
       <input
         className="py-2 border-2 rounded-xl p-2"

@@ -62,7 +62,7 @@ const LogIn = () => {
     <title>LogIn</title>
   </Helmet> 
             <h1 className="text-3xl text-center md:text-5xl font-bold mt-6 pb-10">Your have an account ? please LogIn</h1>
-        <div className="w-full  max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
+        <div className="w-full  md:max-w-md p-8 space-y-3 rounded-xl bg-gray-900 text-gray-100">
         <h1 className="text-2xl font-bold text-center">Login</h1>
         <form onSubmit={handleSubmit(onSubmit)} noValidate="" action="" className="space-y-6">
             <div className="space-y-1 text-sm">
