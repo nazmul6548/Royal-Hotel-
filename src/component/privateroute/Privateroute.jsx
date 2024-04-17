@@ -1,7 +1,7 @@
-import { Children } from "react";
+
 import UseHook from "../../pages/hook/UseHook";
 import { Navigate, useLocation } from "react-router-dom";
-// import AuthProvider from "../../pages/authprovider/AuthProvider";
+
 
 const Privateroute = ({ children }) => {
   // const authprovider =AuthProvider()
